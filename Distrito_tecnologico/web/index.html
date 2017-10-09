@@ -180,20 +180,9 @@ Released for free under the Creative Commons Attribution 3.0 license (templated.
     </div>
   </footer>
   <script src="js/leaflet-map.js"></script>
-  <!-- <script src="js/google-map.js"></script> -->
-  <script>
-      var map;
-      function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 14,
-          center: {lat: -34.639277, lng: -58.400605 }
-        });
-        map.data.loadGeoJson('data/distrito_tecnologico.geojson');
-        map.data.loadGeoJson('data/empresas_dt.geojson');
-      }
-    </script>
-    <script async defer
+  <script src="js/google-map.js"></script>
+  <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2YJRwG_iaCGi0lGfr7PG5Pw2_ZycKqIU&callback=initMap">
-    </script>
+  </script>
 </body>
 </html>
