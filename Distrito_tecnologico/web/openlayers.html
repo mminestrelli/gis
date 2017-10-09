@@ -12,21 +12,7 @@
     <title>OpenLayers</title>
   </head>
   <body>
-    <h2>My Map</h2>
     <div id="map" class="map"></div>
-    <script type="text/javascript">
-      var map = new ol.Map({
-        target: 'map',
-        layers: [
-          new ol.layer.Tile({
-            source: new ol.source.OSM()
-          })
-        ],
-        view: new ol.View({
-          center: ol.proj.fromLonLat([-58.400605, -34.639277]),
-          zoom: 14
-        })
-      });
-    </script>
+    <script src="js/open-layer-map.js" type="text/javascript"></script>
   </body>
 </html>
