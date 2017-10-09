@@ -49,7 +49,7 @@
 	}
 
 	$.getJSON('https://private-55ee92-gis8.apiary-mock.com/companies', null, function (data, status) {
-		if (status === 200) {
+		if (status === 'succcess') {
 			console.log(data);
 			companies = JSON.parse(data);
 			L.geoJSON(companies, {
@@ -69,7 +69,7 @@
 	});
 
 	$.getJSON('https://private-55ee92-gis8.apiary-mock.com/districtArea', null, function (data, status) {
-		if (status === 200) {
+		if (status === "succcess") {
 			console.log(data);
 			districtArea = JSON.parse(data);
 			L.geoJSON(districtArea).addTo(map);
