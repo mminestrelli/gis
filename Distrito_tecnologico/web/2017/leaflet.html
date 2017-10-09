@@ -49,9 +49,9 @@
 	}
 
 	$.getJSON('https://private-55ee92-gis8.apiary-mock.com/companies', null, function (data, status) {
-		if (status === 'succcess') {
+		if (status === "success") {
 			console.log(data);
-			companies = JSON.parse(data);
+			companies = data ;
 			L.geoJSON(companies, {
 				onEachFeature: onEachCompanyFeature,
 				pointToLayer: function (feature, latlng) {
@@ -69,11 +69,9 @@
 	});
 
 	$.getJSON('https://private-55ee92-gis8.apiary-mock.com/districtArea', null, function (data, status) {
-		if (status === "succcess") {
-			console.log(data);
-			districtArea = JSON.parse(data);
+		if (status === "success") {
+			districtArea = data;
 			L.geoJSON(districtArea).addTo(map);
-			map.redraw();
 		}
 	});
 
