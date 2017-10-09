@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mapbox</title>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.40.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.40.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #mapbox{
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id='mapbox'class='map'></div>
+    <script src="js/technological-district-gson-data.js" type="text/javascript"></script>
+
+<script>
+  mapboxgl.accessToken = 'pk.eyJ1IjoibW1pbmVzdHIiLCJhIjoiY2o4anlrdTkxMDhxYTMybXZwY2hrazU1dSJ9.gPG2JcVem8DkoHgm6YAojg';
+  var map = new mapboxgl.Map({
+    container: 'mapbox',
+    style: 'mapbox://styles/mapbox/streets-v10',
+    center: {lat: -34.639277, lng: -58.400605 },
+    zoom: 14
+  });
+  // Add zoom and rotation controls to the map.
+map.addControl(new mapboxgl.NavigationControl());
+map.on('load', function () {
+    map.addLayer({districtArea,
+        'layout': {},
+        'paint': {
+            'fill-color': '#088',
+            'fill-opacity': 0.8
+        }
+    });
+    map.addLayer({companies,
+        'layout': {},
+        'paint': {
+            'fill-color': '#088',
+            'fill-opacity': 0.8
+        }
+    });
+});
+</script>
+
+  </body>
+</html>
